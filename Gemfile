@@ -26,6 +26,7 @@ gem 'devise'
 group :development do
   gem 'binding_of_caller'
   gem 'better_errors'
+  gem 'pry-rails'
 end
 
 # To use ActiveModel has_secure_password
