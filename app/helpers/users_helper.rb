@@ -4,6 +4,6 @@ module UsersHelper
           raw_phone,
           :format => :international,
           :spaces => ''
-      ).gsub(/\s+/, "") # Phony won't remove all spaces
+      ).gsub(/\s+/, "")
   end
 end
