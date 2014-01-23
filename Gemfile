@@ -20,6 +20,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'twilio-ruby'
+gem 'figaro'
+
 gem 'jquery-rails'
 gem 'devise'
 
