@@ -22,6 +22,7 @@ end
 
 gem 'twilio-ruby'
 gem 'figaro'
+gem 'phony'
 
 gem 'jquery-rails'
 gem 'devise'
