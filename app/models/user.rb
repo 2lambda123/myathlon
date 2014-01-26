@@ -6,5 +6,20 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :phone
-  # attr_accessible :title, :body
+  
+  before_create :convert_phone
+  
+  private
+  def convert_phone
+    self.phone = convert_to_e164(self.phone)
+  end
+  
+  def convert_to_e164(raw_phone)
+    ActionController::Base.helpers.number_to_phone(
+      raw_phone.gsub(/\D/, ""), 
+      country_code: 1, 
+      delimiter: ""
+    )
+  end
+
 end
