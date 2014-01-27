@@ -6,7 +6,7 @@ class SmsController < ApplicationController
     @client.account.messages.create(
       from: '+19795894945',
       to: params[:From],
-      body: "Message received - #{params[:Body]}
+      body: "Message received - #{params[:Body]}"
     )    
   end
 end
