@@ -1,4 +1,4 @@
 class Weight < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :weight
   belongs_to :user
 end
