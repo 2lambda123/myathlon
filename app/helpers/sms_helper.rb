@@ -5,7 +5,7 @@ module SmsHelper
     
     case message_parts[0].downcase
     when "weight"
-      user.weights.build(weight: parts[1])
+      user.weights.build(weight: message_parts[1])
     end
     
     user.save!
