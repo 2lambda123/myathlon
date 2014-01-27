@@ -8,5 +8,6 @@ module SmsHelper
       user.weights.build(weight: message_parts[1])
     end
     
+    user.save!
   end
 end
