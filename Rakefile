@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Myathalon::Application.load_tasks
+Myathlon::Application.load_tasks

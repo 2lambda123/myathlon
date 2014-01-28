@@ -1,4 +1,4 @@
-Myathalon::Application.routes.draw do
+Myathlon::Application.routes.draw do
   devise_for :users
 
   root to: "users#show"

@@ -107,6 +107,8 @@ GEM
     rake (10.1.1)
     rdoc (3.12.2)
       json (~> 1.4)
+    rename (1.0.2)
+      rails (>= 3.0.0)
     sass (3.2.13)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -150,6 +152,7 @@ DEPENDENCIES
   phony
   pry-rails
   rails (= 3.2.14)
+  rename
   sass-rails (~> 3.2.3)
   twilio-ruby
   uglifier (>= 1.0.3)
