@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :phone, :weight
   
   has_many :weights
+  has_many :exercises
   
   before_create :convert_phone
   

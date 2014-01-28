@@ -24,6 +24,7 @@ gem 'twilio-ruby'
 gem 'figaro'
 gem 'phony'
 gem 'rename'
+gem 'alchemist'
 
 gem 'jquery-rails'
 gem 'devise'

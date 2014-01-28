@@ -10,13 +10,3 @@ class SmsController < ApplicationController
     # )    
   end
 end
-
-=begin
-Exercises
-
-Swim - Swim 16x25 20:00
-Bike - Bike 5mi 30:00
-Run - Run gym 3.2mi 30:00
-Rest - Rest
-
-=end
