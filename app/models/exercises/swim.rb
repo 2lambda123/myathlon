@@ -1,0 +1,3 @@
+class Swim < Exercises
+  
+end

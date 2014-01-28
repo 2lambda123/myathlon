@@ -1,0 +1,3 @@
+class Rest < Exercises
+  
+end

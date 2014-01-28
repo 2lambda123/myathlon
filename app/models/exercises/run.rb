@@ -1,0 +1,3 @@
+class Run < Exercises
+  
+end

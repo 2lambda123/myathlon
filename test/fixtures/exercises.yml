@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type: 
+  outdoor: false
+  distance: 1.5
+  duration: 2014-01-27 21:46:59
+
+two:
+  type: 
+  outdoor: false
+  distance: 1.5
+  duration: 2014-01-27 21:46:59

@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140123035321) do
+ActiveRecord::Schema.define(:version => 20140128024659) do
+
+  create_table "exercises", :force => true do |t|
+    t.string   "type"
+    t.boolean  "outdoor"
+    t.float    "distance"
+    t.time     "duration"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "exercises", ["user_id"], :name => "index_exercises_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

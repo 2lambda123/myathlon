@@ -4,7 +4,7 @@ module SmsHelper
     user = User.find_by_phone(from)
     
     case message_parts[0].downcase
-    when "weight"
+    when "weight" || "w"
       user.weights.build(weight: message_parts[1])
     end
     
