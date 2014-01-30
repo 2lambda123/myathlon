@@ -62,5 +62,6 @@ module Myathlon
     config.assets.initialize_on_precompile = false
     
     config.autoload_paths += %W(#{config.root}/app/models/exercises)
+    config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**}')]
   end
 end
