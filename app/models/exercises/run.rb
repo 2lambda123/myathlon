@@ -1,3 +1,3 @@
-class Run < Exercises
+class Run < Exercise
   
 end

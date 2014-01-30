@@ -1,3 +1,3 @@
-class Swim < Exercises
+class Swim < Exercise
   
 end

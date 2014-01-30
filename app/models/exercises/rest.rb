@@ -1,3 +1,3 @@
-class Rest < Exercises
+class Rest < Exercise
   
 end

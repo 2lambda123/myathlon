@@ -1,3 +1,3 @@
-class Bike < Exercises
+class Bike < Exercise
   
 end
