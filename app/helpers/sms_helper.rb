@@ -5,15 +5,15 @@ module SmsHelper
     type = get_type(message_parts[0].downcase)
     
     case type
-    when "weight"
+    when "Weight"
       user.weights.build(weight: message_parts[1])
-    when "run" || "swim" || "bike" || "rest"
+    when "Run", "Swim", "Bike", "Rest"
       swim_distance = message_parts.grep(/\d+x\d+/)[0]
       distance = swim_distance ? convert_swim_distance(swim_distance) : message_parts.grep(/.+(?=mi)/)[0][0...-2]
       outdoor = !message_parts.include?("gym")
       duration = convert_to_seconds(message_parts.grep(/\d+:\d+(:\d+)?/)[0])
       
-      user.exercises.build(distance: distance, duration: duration, outdoor: outdoor, type: type.capitalize)
+      user.exercises.build(distance: distance, duration: duration, outdoor: outdoor, type: type)
     end
     
     user.save!
@@ -31,11 +31,11 @@ module SmsHelper
 
   def get_type(type)
     types = {
-      "ru" => "run",    "run" => "run",
-      "b"  => "bike",   "bike" => "bike",
-      "s"  => "swim",   "swim" => "swim", 
-      "re" => "rest",   "rest" => "rest",
-      "w"  => "weight", "weight" => "weight" }
+      "ru" => "Run",    "run" => "Run",
+      "b"  => "Bike",   "bike" => "Bike",
+      "s"  => "Swim",   "swim" => "Swim", 
+      "re" => "Rest",   "rest" => "Rest",
+      "w"  => "Weight", "weight" => "Weight" }
     types[type]
   end
   
@@ -44,10 +44,10 @@ end
 =begin
 message formats
 
-Swim - Swim 16x25 01:20:00
-Bike - Bike 5mi 30:00
-Run - Run gym 3.2mi 30:00
-Rest - Rest
-Weight - Weight 170.0
+Swim - "Swim 16x25 01:20:00"
+Bike - "Bike 5mi 30:00"
+Run - "Run gym 3.2mi 30:00"
+Rest - "Rest"
+Weight - "Weight 170.0"
 
 =end
