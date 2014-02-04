@@ -8,6 +8,11 @@ class User < ActiveRecord::Base
   
   has_many :weights
   has_many :exercises
+  has_many :runs, class_name: "Exercise", conditions: { type: "Run" }
+  has_many :bikes, class_name: "Exercise", conditions: { type: "Bike" }
+  has_many :swims, class_name: "Exercise", conditions: { type: "Swim" }
+  has_many :rests, class_name: "Exercise", conditions: { type: "Rest" }
+
   
   before_create :convert_phone
   
