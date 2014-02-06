@@ -7,13 +7,15 @@ module SmsHelper
     case type
     when "Weight"
       user.weights.build(weight: message_parts[1])
-    when "Run", "Swim", "Bike", "Rest"
+    when "Run", "Swim", "Bike"
       swim_distance = message_parts.grep(/\d+x\d+/)[0]
       distance = swim_distance ? convert_swim_distance(swim_distance) : message_parts.grep(/.+(?=mi)/)[0][0...-2]
       outdoor = !message_parts.include?("gym")
       duration = convert_to_seconds(message_parts.grep(/\d+:\d+(:\d+)?/)[0])
       
       user.exercises.build(distance: distance, duration: duration, outdoor: outdoor, type: type)
+    when "Rest"
+      user.exercises.build(type: type)
     end
     
     user.save!
