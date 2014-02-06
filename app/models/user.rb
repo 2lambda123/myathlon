@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :phone, :weight
   
-  has_many :weights
-  has_many :exercises
+  has_many :weights, dependent: :destroy
+  has_many :exercises, dependent: :destroy
   has_many :runs, class_name: "Exercise", conditions: { type: "Run" }
   has_many :bikes, class_name: "Exercise", conditions: { type: "Bike" }
   has_many :swims, class_name: "Exercise", conditions: { type: "Swim" }

@@ -25,6 +25,7 @@ gem 'figaro'
 gem 'phony'
 gem 'rename'
 gem 'alchemist'
+gem 'nike_v2'
 
 gem 'jquery-rails'
 gem 'devise'
