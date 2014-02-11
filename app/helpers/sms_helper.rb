@@ -30,7 +30,7 @@ module SmsHelper
   private
 
   def convert_metric_distance(distance, multiplier = 1)
-    distance.meters.to.miles.to_f.round(2) * multiplier
+    (distance.meters.to.miles.to_f * multiplier).round(2)
   end
     
   def convert_swim_distance(distance)
