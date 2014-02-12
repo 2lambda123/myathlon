@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require angular
 //= require angular-resource
+//= require main.js
 //= require_tree ./angular
 //= require_tree .
 
-var app = angular.module("Myathlon", ['ngResource']);
