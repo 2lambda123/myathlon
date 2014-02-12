@@ -4,4 +4,6 @@ Myathlon::Application.routes.draw do
   root to: "users#show"
   
   get 'sms', to: 'sms#receive'
+
+  resources :weights, only: :index
 end

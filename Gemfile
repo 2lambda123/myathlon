@@ -29,6 +29,7 @@ gem 'nike_v2'
 
 gem 'jquery-rails'
 gem 'devise'
+gem 'angularjs-rails'
 
 group :development do
   gem 'binding_of_caller'
