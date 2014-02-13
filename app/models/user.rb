@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :phone, :weight
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :phone, :weight, :display_name
   
   has_many :weights, dependent: :destroy
   has_many :exercises, dependent: :destroy

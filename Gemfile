@@ -26,6 +26,7 @@ gem 'phony'
 gem 'rename'
 gem 'alchemist'
 gem 'nike_v2'
+gem 'health_graph'
 
 gem 'jquery-rails'
 gem 'devise'
@@ -35,6 +36,11 @@ group :development do
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'pry-rails'
+end
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 # To use ActiveModel has_secure_password
