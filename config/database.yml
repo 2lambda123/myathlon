@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: myathalon_development
   pool: 5
-  username: cmackenzie
+  username: colinmackenzie
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,5 +43,5 @@ test:
   encoding: unicode
   database: myathalon_test
   pool: 5
-  username: cmackenzie
+  username: colinmackenzie
   password:
