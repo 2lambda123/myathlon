@@ -7,20 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <div id="user_nav">
-    <% if user_signed_in? %>
-      Signed in as <%= current_user.email %>. Not you?
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path %> or
-      <%= link_to "Sign in", new_user_session_path %>
-    <% end %>
-  </div>
-  <br>
-
-<%= yield %>
+  <%= render 'layouts/flash' %>
+  <div class="container-narrow">
+    <div class="masthead">
+      <%= render 'layouts/user_header' %>
+      <h3 class="muted"><%= link_to "Myathlon", root_path %></h3>
+      <h5 class="muted">Track your training</h5>
+    </div>
+  <hr />
+  <%= yield %>
+</div>
+<br>
 
 </body>
 </html>
