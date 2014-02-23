@@ -6,17 +6,38 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-  <%= render 'layouts/flash' %>
-  <div class="container-narrow">
-    <div class="masthead">
-      <%= render 'layouts/user_header' %>
-      <h3 class="muted"><%= link_to "Myathlon", root_path %></h3>
-      <h5 class="muted">Track your training</h5>
+  <% flash.each do |key, value| %>
+        <div class="<%= flash_class(key) %>">
+              <%= value %>
+        </div>
+  <% end %>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+        <div class="masthead">
+          <%= render 'layouts/user_header' %>
+          <h3 class="muted"><%= link_to "Myathlon", root_path %></h3>
+          <h5 class="muted">Track your training</h5>
+        </div>
     </div>
-  <hr />
-  <%= yield %>
+  </div>
 </div>
+
+<hr>
+
+<div class="container">
+  <div class="row">
+    <div class="span9"><%= yield %></div>
+    <div class="span3">
+      <h2>About You</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>        
+    </div>
+  </div>
+</div>
+
 <br>
 
 </body>
