@@ -8,5 +8,6 @@ class SmsController < ApplicationController
     #   to: params[:From],
     #   body: "Message received - #{params[:Body]}"
     # )    
+    render xml: "<Response/>"
   end
 end
